@@ -1,0 +1,28 @@
+{% extends 'shopapp/base.html' %}
+{%load static %}
+{% block main_content %}
+<div class="container">
+    <p>Our Pets</p>
+    {%if petposts%}
+    {% for petpost in petposts %}
+    <div class="cards">
+        <div class="image">
+          <div class ="cardimg">
+            <img src="{{petpost.pet_image.url}}">
+          </div>
+        </div>
+        <div class="cardbottom">
+          <div class="cardtitle">
+            <a href="">{{petpost.name}}</a>
+          </div>
+          <div class="carddesc">
+            <p>Price:{{petpost.price}}</p>
+          </div>
+          <button class="buybtn">Buy</button>
+        </div>
+    </div>
+    {%endfor%}
+    {%endif%}
+</div>
+{% endblock %}
+

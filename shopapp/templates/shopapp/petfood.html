@@ -1,0 +1,27 @@
+{% extends 'shopapp/base.html' %}
+{%load static %}
+{% block main_content %}
+<div class="container">
+    <p>Our Pets</p>
+    {%if petfoodposts%}
+    {% for petfoodpost in petfoodposts %}
+    <div class="cardsf">
+        <div class="imagef">
+          <div class ="cardimgf">
+            <img class="productimg" src="{{petfoodpost.food_image.url}}">
+          </div>
+        </div>
+        <div class="cardbottom">
+          <div class="cardtitle">
+            <a href="">{{petfoodpost.foodname}}</a>
+          </div>
+          <div class="carddesc">
+            <p>Price:{{petfoodpost.food_price}}</p>
+          </div>
+          <button class="buybtn">Buy</button>
+        </div>
+    </div>
+    {%endfor%}
+    {%endif%}
+</div>
+{% endblock %}
