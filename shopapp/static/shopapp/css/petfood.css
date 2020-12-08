@@ -1,0 +1,42 @@
+.middle2{
+    background-color: white;
+    
+}
+.cardsf{
+    float: left;
+    height:250px;
+    display: block;
+    width:210px;
+    margin:10px;
+    box-shadow: 2px 2px 10px black;
+  }
+  .productimg{
+    height:150px;
+    width:150px;
+    padding:6px;
+  }
+  .cardbottom{
+    height:100px;
+    width:100%;
+  }
+  .cardtitle{
+      text-align: center;
+  }
+  .cardtitle a{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .carddesc p{
+    text-align: center;
+    color: black;
+    font-size: 15px;
+  }
+  .buybtn{
+    margin: 4px;
+    width:92%;
+    font-size: 15px;
+
+  }

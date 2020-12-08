@@ -1,0 +1,27 @@
+.middle1{
+    float: left;
+    height: 600px;
+    width:100%;
+    background-image:url(../img/rottweiler-puppies.jpg);
+    background-size: cover;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.middle1 p{
+    margin-top: 460px;
+    margin-left: 50%;
+    text-align: bottom center;
+    color: white;
+    font-size:2vw;
+}
+.btn1{
+    margin-top: 10px;
+    padding: 10px;
+    margin-left: 55%;
+    height:40px;
+    background-color: deeppink;
+}
+.btn1 a{
+    color:black;
+    text-decoration: none;
+}
