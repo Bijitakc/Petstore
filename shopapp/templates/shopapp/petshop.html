@@ -5,13 +5,13 @@
     <p>Our Pets</p>
     {%if petposts%}
     {% for petpost in petposts %}
-    <div class="cards">
+    <div class="cardst">
         <div class="image">
           <div class ="cardimg">
             <img src="{{petpost.pet_image.url}}">
           </div>
         </div>
-        <div class="cardbottom">
+        <div class="cardbottomt">
           <div class="cardtitle">
             <a href="">{{petpost.name}}</a>
           </div>
@@ -19,6 +19,7 @@
             <p>Price:{{petpost.price}}</p>
           </div>
           <button class="buybtn">Buy</button>
+          <button class="cartbtn">Add to cart</button>
         </div>
     </div>
     {%endfor%}

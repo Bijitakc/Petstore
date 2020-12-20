@@ -4,7 +4,6 @@
 }
 .cardsf{
     float: left;
-    height:250px;
     display: block;
     width:210px;
     margin:10px;
@@ -35,6 +34,12 @@
     font-size: 15px;
   }
   .buybtn{
+    margin: 4px;
+    width:92%;
+    font-size: 15px;
+
+  }
+  .cartbtn{
     margin: 4px;
     width:92%;
     font-size: 15px;

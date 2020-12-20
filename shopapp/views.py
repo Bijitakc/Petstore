@@ -7,21 +7,21 @@ def index(request):
     return render(request,'shopapp\index.html')
 
 def petshop(request):
-    petposts=PetModel.objects.all().order_by('name')
+    petposts=PetModel.objects.all().order_by('price')
     context={
         'petposts':petposts
     }
     return render(request,'shopapp\petshop.html',context)
 
 def petfood(request):
-    petfoodposts=PetFoodModel.objects.all().order_by('foodname')
+    petfoodposts=PetFoodModel.objects.all().order_by('food_price')
     context={
         'petfoodposts':petfoodposts
     }
     return render(request,'shopapp\petfood.html',context)
 
 def pettoy(request):
-    pettoyposts=PetToyModel.objects.all().order_by('toyname')
+    pettoyposts=PetToyModel.objects.all().order_by('toy_price')
     context={
         'pettoyposts':pettoyposts
     }

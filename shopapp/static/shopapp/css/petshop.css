@@ -2,9 +2,9 @@
     background-color: white;
     
 }
-.cards{
+.cardst{
     float: left;
-    height:200px;
+    height:230px;
     display: block;
     width:190px;
     margin:10px;
@@ -15,8 +15,8 @@
     width:90%;
     padding:6px;
   }
-  .cardbottom{
-    height:100px;
+  .cardbottomt{
+    height:120px;
     width:100%;
   }
   .cardtitle{
@@ -39,4 +39,10 @@
     width:92%;
     font-size: 15px;
     
+  }
+  .cartbtn{
+    margin: 4px;
+    width:92%;
+    font-size: 15px;
+
   }
