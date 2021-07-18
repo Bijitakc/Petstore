@@ -8,7 +8,7 @@
     <div class="cardst">
         <div class="image">
           <div class ="cardimg">
-            <img src="{{petpost.pet_image.url}}">
+            <img src="{{petpost.image.url}}">
           </div>
         </div>
         <div class="cardbottomt">
@@ -19,7 +19,13 @@
             <p>Price:{{petpost.price}}</p>
           </div>
           <button class="buybtn">Buy</button>
-          <button class="cartbtn">Add to cart</button>
+          <!-- <button class="cartbtn">Add to cart</button> -->
+          <form action="" method="post">
+            {%csrf_token%}
+            <input hidden type="text" name='petpost' value="{{petpost.id}}">
+        
+            <input type="submit" class="cartbtn" value="ADD TO CART">
+          </form>
         </div>
     </div>
     {%endfor%}

@@ -1,0 +1,58 @@
+.heading h1{
+    font-size: 50px;
+    margin:0px 10px 10px 70px;
+}
+.itemcard{
+    height:90px;
+    width:50%;
+    background-color:white;
+    margin:0px 0px 0px 70px;
+    box-shadow: 2px 0px 7px grey;
+}
+.itemimage{
+    float: left;
+    margin: 9px 9px 0px 9px;
+}
+.itemimage img{
+    padding: 5px;
+    height:60px;
+    width:90px;  
+}
+.next{
+    float: left;
+    margin-left:10px;
+}
+.next p b{
+    font-style: bold;
+    font-size: 25px;
+}
+.last{
+    float: right;
+    padding: 10px;
+}
+.rem{
+    margin: 5px;
+    width:50%;
+    background-color: rgb(240, 46, 46);
+    color: white;
+}
+.summary{
+    height: 100px;
+    width:30%;
+    float: right;
+    top:10px;
+    padding:10px;
+    margin:2vw 7vw 3vw 6vw;
+    box-shadow: 2px 0px 10px grey;
+}
+.summary p b{
+    margin:2px;
+    font-size:20px;
+}
+.Checkoutbtn{
+    height:50px;
+    width:50%;
+    background-color: khaki;
+    padding: 2px;
+    margin: 10px 5px 5px 10px;
+}

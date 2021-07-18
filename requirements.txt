@@ -1,0 +1,4 @@
+Django
+django-shopping-cart
+Pillow
+pytz

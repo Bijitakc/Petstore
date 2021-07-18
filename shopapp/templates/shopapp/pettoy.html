@@ -8,18 +8,22 @@
     <div class="cards">
         <div class="imaget">
           <div class ="cardimgt">
-            <img class="productimgt" src="{{pettoypost.toy_image.url}}">
+            <img class="productimgt" src="{{pettoypost.image.url}}">
           </div>
         </div>
         <div class="cardbottom">
           <div class="cardtitle">
-            <a href="">{{pettoypost.toyname}}</a>
+            <a href="">{{pettoypost.name}}</a>
           </div>
           <div class="carddesc">
-            <p>Price:{{pettoypost.toy_price}}</p>
+            <p>Price:{{pettoypost.price}}</p>
           </div>
           <button class="buybtn">Buy</button>
-          <button class="cartbtn">Add to cart</button>
+          <form action="" method="POST">
+            {%csrf_token%}
+            <input  hidden type="text" value="{{pettoypost.id}}" name="pettoypost">
+            <input type="submit" class="cartbtn" value="Add to cart">
+          </form>
         </div>
     </div>
     {%endfor%}

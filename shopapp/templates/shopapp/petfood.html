@@ -8,18 +8,22 @@
     <div class="cardsf">
         <div class="imagef">
           <div class ="cardimgf">
-            <img class="productimg" src="{{petfoodpost.food_image.url}}">
+            <img class="productimg" src="{{petfoodpost.image.url}}">
           </div>
         </div>
         <div class="cardbottom">
           <div class="cardtitle">
-            <a href="">{{petfoodpost.foodname}}</a>
+            <a href="">{{petfoodpost.name}}</a>
           </div>
           <div class="carddesc">
-            <p>Price:{{petfoodpost.food_price}}</p>
+            <p>Price:{{petfoodpost.price}}</p>
           </div>
           <button class="buybtn">Buy</button>
-          <button class="cartbtn">Add to cart</button>
+          <form action="" method="POST">
+            {%csrf_token%}
+            <input hidden type="text" value="{{petfoodpost.id}}" name="petfoodpost">
+            <input type="submit" class="cartbtn" value="Add to cart">
+          </form>
         </div>
     </div>
     {%endfor%}

@@ -1,0 +1,40 @@
+{%extends 'shopapp/base.html'%}
+{% block main_content %}
+{% load static%}
+<div class="heading">
+    <h1>My Cart</h1>
+</div>
+<br><br>
+<div class="summary">
+    <p><b>Order Summary</b></p>
+    <Button class="Checkoutbtn">Proceed to Checkout</Button>
+</div>
+{%if items%}
+{%for item in items%}
+<div class="itemcard">
+    <div class="itemimage" >
+        <img src="{{item.image.url}}">
+    </div>
+    <div class="next">
+        <p><b>{{item.name}}</b></p><br>
+        <p>Price:Rs{{item.price}}</p>
+    </div>
+    <div class="last">
+        <p>Quantity</p>
+        <form action="" method="POST">
+            <input type="text" name="quantity" value="1">
+        </form>
+        <Button class="rem" onclick="delitem({{item.id}})">Remove</Button>
+    </div>
+</div><br>
+{%endfor%}
+{%endif%}
+<br><br><br><br>
+<script>
+    function delitem(id){
+        console.log(id)
+
+        
+    }
+</script>
+{% endblock %}

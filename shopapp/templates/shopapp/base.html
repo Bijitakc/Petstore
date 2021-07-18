@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'shopapp/css/petshop.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'shopapp/css/petfood.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'shopapp/css/pettoy.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'shopapp/css/cart.css' %}">
 
 </head>
 <body>
@@ -22,6 +23,11 @@
         <a href="{% url 'logout' %}">
           <button type="button" class="btn btn-primary" style="float: right;margin-left:10px ">
             Logout
+          </button>
+        </a>
+        <a href="{% url 'cart' %}">
+          <button type="button" class="btn btn-primary" style="float: right;margin-left:10px ">
+            My cart
           </button>
         </a>
         {%else%}
