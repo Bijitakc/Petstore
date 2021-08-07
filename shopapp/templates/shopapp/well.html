@@ -1,0 +1,27 @@
+{% extends 'shopapp/base.html' %}
+{%load static %}
+{% block main_content %}
+<div class="container">
+    <p  class="headingp">Our Pets</p>
+    {%if blogs%}
+    {% for blog in blogs %}
+    <div class="cardsb">
+        <div class="imagef">
+          <div class ="cardimgf">
+            <img class="blogimg" src="{{blog.image.url}}">
+          </div>
+        </div>
+        <div class="cardbottom">
+          <div class="cardtitle">
+            <a href="">{{blog.title}}</a>
+          </div><br>
+          <div class="carddesc">
+            <p >{{blog.content|truncatewords:20}}</p>
+          </div><br>
+          <button class="buybtn"><a href="{% url 'blogdetail' blog.id %}">Read More</a></button>
+        </div>
+    </div>
+    {%endfor%}
+    {%endif%}
+</div>
+{% endblock %}

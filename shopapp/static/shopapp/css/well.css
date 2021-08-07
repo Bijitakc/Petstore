@@ -1,0 +1,14 @@
+.cardsb{
+    float: left;
+    display: block;
+    height: 100%;
+    width:220px;
+    margin:10px;
+    box-shadow: 2px 2px 10px black;
+  }
+.blogimg{
+    height:150px;
+    width:200px;
+    padding:6px;
+    margin-left: 5px;
+}

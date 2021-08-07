@@ -83,29 +83,33 @@ class Pettoy(View):
         return redirect('pettoy')
 
 def Cart(request):
-    User=request.user
+    user=request.user
+    print(user)
     items=[]
-    product=Cartitem.objects.get(user=User)
-    print(product)
-    if product:
-        try:
-            pets=product.pets.all()
-            for pet in pets:
-                items.append(pet)
-        except IndexError:
-            pass
-        try:
-            petfoods=product.petfoods.all()
-            for petfood in petfoods:
-                items.append(petfood)
-        except IndexError:
-            pass
-        try:
-            pettoys=product.pettoys.all()
-            for pettoy in pettoys:
-                items.append(pettoy)
-        except IndexError:
-            pass
+    try:  
+        product=Cartitem.objects.get(user=user)
+        print(product)
+        if product:
+            try:
+                pets=product.pets.all()
+                for pet in pets:
+                    items.append(pet)
+            except IndexError:
+                pass
+            try:
+                petfoods=product.petfoods.all()
+                for petfood in petfoods:
+                    items.append(petfood)
+            except IndexError:
+                pass
+            try:
+                pettoys=product.pettoys.all()
+                for pettoy in pettoys:
+                    items.append(pettoy)
+            except IndexError:
+                pass
+    except Exception:
+        pass
     context={
         'items':items
     }
@@ -118,9 +122,17 @@ def Cart(request):
 #         Cartitem.objects.filter(id=id).delete()  
 
 
-# def blog(request):
-#     blogs = Blog.objects.all()
-#     context = {
-#         'blogs' : blogs
-#     }
-#     return render(request, 'shopapp\blogs.html')
+def blogview(request):
+    blogs = Blog.objects.all()
+    context = {
+        'blogs' : blogs
+    }
+    return render(request, 'shopapp\well.html',context)
+
+
+def blogdetail(request, id):
+    blog = Blog.objects.get(id=id)
+    context= {
+        'blog':blog
+    }
+    return render(request,'shopapp/blogdetail.html',context)

@@ -1,0 +1,9 @@
+{% extends 'shopapp/base.html' %}
+{%load static %}
+{% block main_content %}
+<div class="container">
+    <p  class="headingp">{{blog.title}}</p>
+    <img class="blogimg" src="{{blog.image.url}}">
+    <p>{{blog.content}}</p>
+</div>
+{% endblock %}
