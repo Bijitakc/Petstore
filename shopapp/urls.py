@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.urls import path,include
-from .views import index,petshop,petfood,pettoy,cart
+from .views import Index,Petshop,Petfood,Pettoy,Cart
 
 urlpatterns = [
-    path('',index,name='index'),
-    path('petshop/',petshop.as_view(),name='petshop'),
-    path('petfood/',petfood.as_view(),name='petfood'),
-    path('pettoy/',pettoy.as_view(),name='pettoy'),
-    path('mycart/',cart,name='cart')
+    path('',Index,name='index'),
+    path('petshop/',Petshop.as_view(),name='petshop'),
+    path('petfood/',Petfood.as_view(),name='petfood'),
+    path('pettoy/',Pettoy.as_view(),name='pettoy'),
+    # path('blogs/', theblogs , name='theblogs'),
+    path('mycart/',Cart,name='cart')
 ]

@@ -64,3 +64,11 @@ class Cartitem(models.Model):
         verbose_name="cart"
         verbose_name_plural="carts"
 
+class Blog(models.Model):
+    title = models.CharField(max_length=70)
+    image = models.ImageField(upload_to = "blogimage")
+    content = models.TextField()
+
+    class Meta:
+        verbose_name="Blog"
+        verbose_name_plural="Blogs"

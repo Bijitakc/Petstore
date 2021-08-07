@@ -1,16 +1,15 @@
 from django.shortcuts import render,redirect
 
-from .models import PetModel,PetFoodModel,PetToyModel,Cartitem
+from .models import PetModel,PetFoodModel,PetToyModel,Cartitem,Blog
 from django.contrib.auth.decorators import login_required
 from django.views import View
 # Create your views here.
 
 
-
-def index(request):
+def Index(request):
     return render(request,'shopapp\index.html')
 
-class petshop(View):
+class Petshop(View):
 
     def post(self,request):
        petpostid=request.POST.get('petpost')
@@ -35,7 +34,7 @@ class petshop(View):
         }
         return render(request,'shopapp\petshop.html',context)
 
-class petfood(View):
+class Petfood(View):
     def get(self,request):
         petfoodposts=PetFoodModel.objects.all().order_by('price')
         context={
@@ -59,7 +58,7 @@ class petfood(View):
             ins.save()
         return redirect('petfood')
 
-class pettoy(View):
+class Pettoy(View):
     def get(self,request):
         pettoyposts=PetToyModel.objects.all().order_by('price')
         context={
@@ -83,7 +82,7 @@ class pettoy(View):
             ins.save()
         return redirect('pettoy')
 
-def cart(request):
+def Cart(request):
     User=request.user
     items=[]
     product=Cartitem.objects.get(user=User)
@@ -113,7 +112,15 @@ def cart(request):
 
     return render(request,'shopapp\cart.html',context)
 
-def delpost(request,identifier):
-    id=get_object_or_404()
-    if request.method=="DELETE":
-        Cartitem.objects.filter(id=id).delete()  
+# def Delpost(request):
+#     id=get_object_or_404()
+#     if request.method=="DELETE":
+#         Cartitem.objects.filter(id=id).delete()  
+
+
+# def blog(request):
+#     blogs = Blog.objects.all()
+#     context = {
+#         'blogs' : blogs
+#     }
+#     return render(request, 'shopapp\blogs.html')
