@@ -1,2 +1,2 @@
 # Petstore
-A petstore ecommerce website(ongoing)
+A petstore ecommerce website(Ongoing)
