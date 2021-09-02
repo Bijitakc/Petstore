@@ -77,6 +77,8 @@ table {
     margin-top: 4px;
     width:85%;
     font-size: 15px;
+    background-color: rgb(243, 87, 26);
+    border: 4px rgb(243, 87, 26);
     
   }
   .cartbtn{
@@ -84,5 +86,6 @@ table {
     margin-top: 4px;
     width:85%;
     font-size: 15px;
-
+    background-color: #45f31a;
+    border: 4px #45f31a;
   }
